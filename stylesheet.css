@@ -1,60 +1,92 @@
 * {
   box-sizing: border-box;
+  background-color: #D1E2EA;
+}
+
+.main{
+  padding: 10px 5px;
+}
+
+h1 {
+  background-color: transparent;
+}
+
+h2 {
+  background-color: transparent;
+}
+
+p {
+  background-color: transparent;
+}
+
+p > a{
+  background-color: transparent;
 }
 
 .container {
-  border: 2px solid #1b0303;
-  background-color: #D1E2EA;
-
-  width: 90%;
-  height: 1000px;
-  margin: 0 auto;
-
-  /* flex-box */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-flow: column;
+  border-radius: 10px;
+  margin: 0 15% 10px;
+  padding: 10px 0;
+
+  color: #1b0303;
+  background-color: white;
   align-items: center;
   text-align: center;
 }
 
-
-#pasteTarget{
-    width: 200px;
-    height: 200px;
-    margin: 5px;
-    background: grey;
-    border: solid 1px;
-
-    /* flex-box*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title {
+  height: 50px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
 }
 
-#canvasTarget{
-    width: 200px;
-    height: 200px;
-    margin: 5px;
-    background: grey;
-    border: solid 1px;
+.firtst {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
 }
 
-#result{
-    color:#1b0303;
-    background-color: white;
-    font-size: 20px;
-    text-align: left;
-    width:80%;
-    height:300px;
-    /*
+.second {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+}
+
+#pasteTarget {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  background: grey;
+
+  /* flex-box*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvasTarget {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  background: grey;
+}
+
+#result {
+  color: #1b0303;
+  background-color: rgba(255, 255, 255, 0.856);
+  font-size: 20px;
+  text-align: left;
+  width: 80%;
+  height: 300px;
+  /*
     */
-    padding: 0 5px;
-    border: solid 1px;
-    overflow-wrap: break-word;
-}
-
-h3{
-    padding-top: 15px;
-    color:#1b0303;
+  padding: 0 5px;
+  margin-bottom: 15px;
+  border: solid 1px #7a7a7a;
+  overflow-wrap: break-word;
 }

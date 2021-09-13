@@ -4,6 +4,7 @@ window.onload = function() {
         addEventListener("paste", handlePaste);
     var canvas = document.getElementById('canvasTarget');
     var context = canvas.getContext('2d');
+    const result = document.getElementById('result')
 
     imageObj.onload = function() {
         canvas.width  = imageObj.width;
@@ -11,8 +12,10 @@ window.onload = function() {
         context.drawImage(imageObj, 0, 0);
         let judge = checkQRCode(canvas, context);
         if(judge){
-            const result = document.getElementById('result')
             result.innerHTML = `<p>${AutoLink(judge)}</p>`
+        }
+        else{
+            result.innerHTML = `<p>有効なQRコードを入力してください</p>`
         }
     };
 };
@@ -38,7 +41,7 @@ function checkQRCode(canvas,context){
     //alert( code.data );
     return code.data;
   }else{
-    alert( "No QR Code found." );
+    //alert( "No QR Code found." );
     return false;
   }
 }
